@@ -1,0 +1,44 @@
+`timescale 1ns/10ps
+
+//testbench name with ();
+module testbench_tb();
+
+
+reg clock, clear;
+reg [3:0] present_state;
+
+
+//anything with a 'reg' is being changed by you
+
+
+//setup top-level module here:
+
+
+
+//states and clock control:
+parameter init = 4'd1, T0 = 4'd2, T1 = 4'd3, T2 = 4'd4; //can add more states here
+initial begin clock = 0; present_state = 4'd0; end
+always #10 clock = ~clock;
+always @ (negedge clock) present_state = present_state + 1;
+
+
+
+
+always @(present_state) begin
+	case(present_state)
+		init: begin
+		
+		end
+		T0: begin
+
+		end
+		T1: begin 
+
+		end
+		T2: begin 
+
+		end
+
+	endcase
+end
+endmodule 

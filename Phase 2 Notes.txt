@@ -1,0 +1,23 @@
+Select and Encode logic + R0 revision
+	Gra, Grb, Grc signals control if it is Ra, Rb, or Rc
+	Rin, Rout dictate in or out
+	BAout signal will override R0 output to busmux and output 0s, doesn't actually change R0 value
+	
+Memory Subsystem
+	MAR register
+	RAM Component (can build or choose from library)
+	
+	
+CON FF
+	decoder, branch if =0, !=0, >0, <0
+Input/Output ports
+
+
+Load/store inst.
+branch/jump inst.
+immediate inst.
+
+Assembly Instructions to simulate:
+ld, ldi, st, addi, andi, ori, brzr, brnz, brmi, brpl, jr, jal, mfhi, mflo
+
+**Instuction decoding is Phase 3**

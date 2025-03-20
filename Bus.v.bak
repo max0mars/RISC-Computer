@@ -1,0 +1,21 @@
+module Bus (
+	//Mux
+	input [31:0]BusMuxInR0, input [31:0]BusMuxInR1, input [31:0]BusMuxInR2,input [31:0]BusMuxInR3, input [31:0]BusMuxInR4, input [31:0]BusMuxInR5,
+	//Encoder
+	input R0out, R1out, R2out, R3out, R4out, R5out,
+
+	output wire [31:0]BusMuxOut
+);
+
+reg [31:0]q;
+
+always @ (*) begin
+	if(R0out) q = BusMuxInR0;
+	if(R1out) q = BusMuxInR1;
+	if(R2out) q = BusMuxInR2;
+	if(R3out) q = BusMuxInR3;
+	if(R4out) q = BusMuxInR4;
+	if(R5out) q = BusMuxInR5;
+end
+assign BusMuxOut = q;
+endmodule

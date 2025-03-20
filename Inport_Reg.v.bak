@@ -1,0 +1,20 @@
+module Inport_Reg (
+	input clear, enable, 
+	input [31:0]Input,
+	output wire [31:0]Output
+);
+
+reg [32:0]q;
+initial q = INIT;
+always @ (*)
+		begin
+			if (clear) begin
+				q <= 32'b0;
+			end
+			else if (enable) begin
+				q <= Input;
+			end
+		end
+
+assign Output = q;
+endmodule

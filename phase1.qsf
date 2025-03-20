@@ -1,0 +1,176 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+# Date created = 09:23:26  January 30, 2025
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		phase1_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CGXFC7C7F23C8
+set_global_assignment -name TOP_LEVEL_ENTITY DataPath
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:23:26  JANUARY 30, 2025"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Standard Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH Demo_ROR_tb -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME quick_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id quick_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id quick_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME quick_tb -section_id quick_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME datapath_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME datapath_tb -section_id datapath_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id datapath_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME Demo_AND_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Demo_AND_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id Demo_AND_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Demo_AND_tb -section_id Demo_AND_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME Demo_NEG_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Demo_NEG_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id Demo_NEG_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Demo_NEG_tb -section_id Demo_NEG_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME Demo_NOT_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Demo_NOT_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id Demo_NOT_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Demo_NOT_tb -section_id Demo_NOT_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME Demo_DIV_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Demo_DIV_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id Demo_DIV_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Demo_DIV_tb -section_id Demo_DIV_tb
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name EDA_TEST_BENCH_NAME Demo_SUB_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Demo_SUB_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Demo_SUB_tb -section_id Demo_SUB_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME Demo_OR_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Demo_OR_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id Demo_OR_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Demo_OR_tb -section_id Demo_OR_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME Demo_ADD_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Demo_ADD_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id Demo_ADD_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Demo_ADD_tb -section_id Demo_ADD_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME Demo_SHR_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Demo_SHR_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Demo_SHR_tb -section_id Demo_SHR_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME Demo_SHRA_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Demo_SHRA_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id Demo_SHRA_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Demo_SHRA_tb -section_id Demo_SHRA_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME Demo_SHL_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Demo_SHL_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id Demo_SHL_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Demo_SHL_tb -section_id Demo_SHL_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME Demo_MUL_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Demo_MUL_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id Demo_MUL_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Demo_MUL_tb -section_id Demo_MUL_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME Demo_ROL_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Demo_ROL_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id Demo_ROL_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Demo_ROL_tb -section_id Demo_ROL_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME Demo_ROR_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Demo_ROR_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Demo_ROR_tb -section_id Demo_ROR_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id Demo_ROR_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id Demo_SUB_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id Demo_SHR_tb
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VERILOG_FILE Phase1_TestBenches/tutorial_tb.v
+set_global_assignment -name VERILOG_FILE Phase1_TestBenches/testbench_tb.v
+set_global_assignment -name VERILOG_FILE Phase1_TestBenches/register_tb.v
+set_global_assignment -name VERILOG_FILE Phase1_TestBenches/quick_tb.v
+set_global_assignment -name VERILOG_FILE Phase1_TestBenches/or_bits_tb.v
+set_global_assignment -name VERILOG_FILE Phase1_TestBenches/Demo_SUB_tb.v
+set_global_assignment -name VERILOG_FILE Phase1_TestBenches/Demo_SHRA_tb.v
+set_global_assignment -name VERILOG_FILE Phase1_TestBenches/Demo_SHR_tb.v
+set_global_assignment -name VERILOG_FILE Phase1_TestBenches/Demo_SHL_tb.v
+set_global_assignment -name VERILOG_FILE Phase1_TestBenches/Demo_ROR_tb.v
+set_global_assignment -name VERILOG_FILE Phase1_TestBenches/Demo_ROL_tb.v
+set_global_assignment -name VERILOG_FILE Phase1_TestBenches/Demo_OR_tb.v
+set_global_assignment -name VERILOG_FILE Phase1_TestBenches/Demo_NOT_tb.v
+set_global_assignment -name VERILOG_FILE Phase1_TestBenches/Demo_NEG_tb.v
+set_global_assignment -name VERILOG_FILE Phase1_TestBenches/Demo_MUL_tb.v
+set_global_assignment -name VERILOG_FILE Phase1_TestBenches/Demo_DIV_tb.v
+set_global_assignment -name VERILOG_FILE Phase1_TestBenches/Demo_AND_tb.v
+set_global_assignment -name VERILOG_FILE Phase1_TestBenches/Demo_ADD_tb.v
+set_global_assignment -name VERILOG_FILE Phase1_TestBenches/datapath_tb.v
+set_global_assignment -name VERILOG_FILE Phase1_TestBenches/busregister_tb.v
+set_global_assignment -name VERILOG_FILE Phase1_TestBenches/bus_tb.v
+set_global_assignment -name VERILOG_FILE Phase1_TestBenches/and_tb.v
+set_global_assignment -name VERILOG_FILE ALU_Operations/subtract_bits.v
+set_global_assignment -name VERILOG_FILE ALU_Operations/rotate_right_bits.v
+set_global_assignment -name VERILOG_FILE ALU_Operations/rotate_left_bits.v
+set_global_assignment -name VERILOG_FILE ALU_Operations/or_bits.v
+set_global_assignment -name VERILOG_FILE ALU_Operations/not_bits.v
+set_global_assignment -name VERILOG_FILE ALU_Operations/negate_bits.v
+set_global_assignment -name VERILOG_FILE ALU_Operations/mul_bits.v
+set_global_assignment -name VERILOG_FILE ALU_Operations/logical_shift_right_bits.v
+set_global_assignment -name VERILOG_FILE ALU_Operations/logical_shift_left_bits.v
+set_global_assignment -name VERILOG_FILE ALU_Operations/div_bits.v
+set_global_assignment -name VERILOG_FILE ALU_Operations/arithmetic_shift_right_bits.v
+set_global_assignment -name VERILOG_FILE ALU_Operations/Andbits.v
+set_global_assignment -name VERILOG_FILE ALU_Operations/add_bits.v
+set_global_assignment -name VERILOG_FILE Zregister.v
+set_global_assignment -name VERILOG_FILE register.v
+set_global_assignment -name VERILOG_FILE MDR.v
+set_global_assignment -name VERILOG_FILE Encoder32.v
+set_global_assignment -name VERILOG_FILE DataPath.v
+set_global_assignment -name VERILOG_FILE Bus.v
+set_global_assignment -name VERILOG_FILE ALU.v
+set_global_assignment -name EDA_TEST_BENCH_FILE Phase1_TestBenches/quick_tb.v -section_id quick_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE datapath_tb.v -section_id datapath_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Demo_AND_tb.v -section_id Demo_AND_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Demo_NEG_tb.v -section_id Demo_NEG_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Demo_NOT_tb.v -section_id Demo_NOT_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Demo_DIV_tb.v -section_id Demo_DIV_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Demo_SUB_tb.v -section_id Demo_SUB_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Demo_OR_tb.v -section_id Demo_OR_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Demo_ADD_tb.v -section_id Demo_ADD_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Demo_SHR_tb.v -section_id Demo_SHR_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Demo_SHRA_tb.v -section_id Demo_SHRA_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Demo_SHL_tb.v -section_id Demo_SHL_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Demo_MUL_tb.v -section_id Demo_MUL_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Demo_ROL_tb.v -section_id Demo_ROL_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Demo_ROR_tb.v -section_id Demo_ROR_tb

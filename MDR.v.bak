@@ -1,0 +1,8 @@
+module MDR (
+
+	input[31:0] Bus, Mdatain,
+	input read,
+	input clock, clear, MDRen,
+	
+	output[31:0] MDRout
+);
