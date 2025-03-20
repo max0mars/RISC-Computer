@@ -1,0 +1,58 @@
+module mul_bits (
+
+    input signed [31:0] RA, RB,  // ra = multiplicand, rb = multiplier
+    output reg [63:0] RZ          // product (64 bits) 
+	 
+	 
+);
+
+    // booth encoding :
+	 // 00 -> 0 no operation, 
+	 // 01 -> + Multiplicand, 
+	 // 10 -> - multiplicand, 
+	 // 11 -> 0 no operation
+	 
+	 reg [2:0] encoding[(32 / 2) - 1:0];   
+	 
+    reg [32:0] pp[(32 / 2) - 1:0];  // partial product
+    reg [63:0] spp[(32 / 2) - 1:0]; // Shifted partial products
+   
+    reg [63:0] product; // Final computed product
+    integer i, j;
+
+    wire [32:0] inv_RA; // Sign-extended negative multiplicand
+    
+	 assign inv_RA = { ~RA[31], ~RA} + 1;// flip sign bit and add one for 2's complement 
+
+    always @ (RA or RB or inv_RA) begin
+        // Initialize Booth encoding for RB
+        encoding[0] = {RB[1], RB[0], 1'b0};
+        for (j = 1; j < (32/2); j = j+1)
+            encoding[j] = {RB[2*j+1], RB[2*j], RB[2*j-1]};
+       
+        // Generate partial products based on Booth encoding
+        for (j = 0; j < (32/2); j = j+1) begin
+            case(encoding[j])
+                3'b001, 3'b010: pp[j] = {RA[31], RA};      // Add A
+                3'b011:         pp[j] = {RA, 1'b0};       // Add 2A
+                3'b100:         pp[j] = {inv_RA[31:0], 1'b0}; // Subtract 2A
+                3'b101, 3'b110: pp[j] = inv_RA;           // Subtract A
+                default:        pp[j] = 0;
+            endcase
+            spp[j] = $signed(pp[j]); // Sign-extend the partial product
+
+            // Shift partial products accordingly
+            for (i = 0; i < j; i = i + 1)
+                spp[j] = {spp[j], 2'b00};
+        end
+
+        // Sum all shifted partial products to get the final product
+        product = spp[0];
+        for (j = 1; j < (32/2); j = j+1)
+            product = product + spp[j];
+
+        // Assign final product to output
+        RZ = product;
+    end
+
+endmodule

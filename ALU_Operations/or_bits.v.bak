@@ -1,0 +1,8 @@
+module or_bits(
+	input wire [31:0] RA, RB,
+	output wire [31:0] RZ
+	);
+	
+
+assign RZ[i] = (RA[i]|RB[i]);
+endmodule

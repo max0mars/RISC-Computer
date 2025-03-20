@@ -1,0 +1,273 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ConOut",
+					"strict" : false
+				},
+				{
+					"name" : "MDRSel",
+					"strict" : false
+				},
+				{
+					"name" : "CSel",
+					"strict" : false
+				},
+				{
+					"name" : "ZLoSel",
+					"strict" : false
+				},
+				{
+					"name" : "ZHiSel",
+					"strict" : false
+				},
+				{
+					"name" : "LoSel",
+					"strict" : false
+				},
+				{
+					"name" : "PCSel",
+					"strict" : false
+				},
+				{
+					"name" : "IPortSel",
+					"strict" : false
+				},
+				{
+					"name" : "Gra",
+					"strict" : false
+				},
+				{
+					"name" : "Grb",
+					"strict" : false
+				},
+				{
+					"name" : "Grc",
+					"strict" : false
+				},
+				{
+					"name" : "ROut",
+					"strict" : false
+				},
+				{
+					"name" : "BAOut",
+					"strict" : false
+				},
+				{
+					"name" : "HiSel",
+					"strict" : false
+				},
+				{
+					"name" : "clear",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[31]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[10]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[11]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[23]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[12]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[13]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[14]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[15]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[16]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[17]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[18]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[19]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[20]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[21]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[22]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[24]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[25]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[26]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[27]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[28]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[29]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[30]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[0]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[2]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[3]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[4]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[5]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[6]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[7]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[8]",
+					"strict" : false
+				},
+				{
+					"name" : "IPortInput[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ConIn",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "IRIn",
+					"strict" : false
+				},
+				{
+					"name" : "HiIn",
+					"strict" : false
+				},
+				{
+					"name" : "LoIn",
+					"strict" : false
+				},
+				{
+					"name" : "ALUCode[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUCode[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUCode[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUCode[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUCode[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ZIn",
+					"strict" : false
+				},
+				{
+					"name" : "PCIn",
+					"strict" : false
+				},
+				{
+					"name" : "memread",
+					"strict" : false
+				},
+				{
+					"name" : "MDRIn",
+					"strict" : false
+				},
+				{
+					"name" : "RIn",
+					"strict" : false
+				},
+				{
+					"name" : "YIn",
+					"strict" : false
+				},
+				{
+					"name" : "MARIn",
+					"strict" : false
+				},
+				{
+					"name" : "memwrite",
+					"strict" : false
+				},
+				{
+					"name" : "initMem",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
