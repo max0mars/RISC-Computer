@@ -1,20 +1,7 @@
 module DataPath(
-	input wire clock, clear,
-	
-	//register enable signals (R0-R15 is done by Select/Encode)
-	 //Added MARIn, OPortIn, IRin for phase 2
-	
-	//register select signals (BusMux) (R0-R15 is done by Select/Encode)
-	input wire HiSel, LoSel, ZHiSel, ZLoSel, PCSel, MDRSel, IPortSel, CSel,//Added IPortSel for phase 2
+	input wire clock,
 	
 	input wire [31:0] IPortInput,
-	
-	
-	
-	input wire ConIn, 
-	output wire ConOut,
-	
-	input wire [4:0] ALUCode,
 	
 	input wire initMem
 );
@@ -23,19 +10,24 @@ wire [15:0] regIn;//register enable signal
 wire [31:0] regVal [15:0];//register output value
 wire [31:0] BusVal;//bus line after mux
 wire Gra, Grb, Grc, RIn, ROut, BAOut;
+wire ConIn, ConOut;
 wire HiIn, LoIn, ZIn, PCIn, MDRIn, MARIn, YIn, OPortIn, IRIn;
+wire HiSel, LoSel, ZHiSel, ZLoSel, PCSel, MDRSel, IPortSel, CSel;
 wire memread, memwrite;
-wire clear, run
+wire clear, run, reset, stop;
 
+wire [4:0] ALUCode;
 wire [31:0] HiVal, LoVal, ZHiVal, ZLoVal, PCVal, MDRVal, MARVal, YVal, OPortVal, IPortVal, IRVal;
 
 control_unit(
 	.Gra(Gra), .Grb(Grb), .Grc(Grc), .RIn(RIn), .ROut(ROut), .BAOut(BAOut),
+	.CONin(ConIn),
 	.HiIn(HiIn), .LoIn(LoIn), .ZIn(ZIn), .PCIn(PCIn), .MDRIn(MDRIn), .MARIn(MARIn), .YIn(YIn), .OPortIn(OPortIn), .IRIn(IRIn),
-	.HiOut(HiOut), .LoOut(LoOut), .ZHiOut(ZHiOut), .ZLoOut(ZLoOut), .PCOut(PCOut), .MDROut(MDROut), .IPortOut(IPortOut), .COut(COut),
+	.HiOut(HiSel), .LoOut(LoSel), .ZHiOut(ZHiSel), .ZLoOut(ZLoSel), .PCOut(PCSel), .MDROut(MDRSel), .IPortOut(IPortSel), .COut(CSel),
 	.Read(memread), .Write(memwrite), .Clear(clear), .Run(run),
 	.ALUCode(ALUCode),
-	.IR(IRVal)
+	.IR(IRVal),
+	.Clock(clock), .Reset(reset), .Stop(stop)
 );
 
 
