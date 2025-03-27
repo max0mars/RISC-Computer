@@ -20,10 +20,10 @@ wire [4:0] ALUCode;
 wire [31:0] HiVal, LoVal, ZHiVal, ZLoVal, PCVal, MDRVal, MARVal, YVal, OPortVal, IPortVal, IRVal;
 
 control_unit(
-	.Gra(Gra), .Grb(Grb), .Grc(Grc), .RIn(RIn), .ROut(ROut), .BAOut(BAOut),
+	.Gra(Gra), .Grb(Grb), .Grc(Grc), .Rin(RIn), .Rout(ROut), .BAout(BAOut),
 	.CONin(ConIn),
-	.HiIn(HiIn), .LoIn(LoIn), .ZIn(ZIn), .PCIn(PCIn), .MDRIn(MDRIn), .MARIn(MARIn), .YIn(YIn), .OPortIn(OPortIn), .IRIn(IRIn),
-	.HiOut(HiSel), .LoOut(LoSel), .ZHiOut(ZHiSel), .ZLoOut(ZLoSel), .PCOut(PCSel), .MDROut(MDRSel), .IPortOut(IPortSel), .COut(CSel),
+	.HIin(HiIn), .LOin(LoIn), .Zin(ZIn), .PCin(PCIn), .MDRin(MDRIn), .MARin(MARIn), .Yin(YIn), .OutPortin(OPortIn), .IRin(IRIn),
+	.HIout(HiSel), .LOout(LoSel), .Zhighout(ZHiSel), .Zlowout(ZLoSel), .PCout(PCSel), .MDRout(MDRSel), .InPortout(IPortSel), .Cout(CSel),
 	.Read(memread), .Write(memwrite), .Clear(clear), .Run(run),
 	.ALUCode(ALUCode),
 	.IR(IRVal),
