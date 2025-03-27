@@ -1,0 +1,91 @@
+`timescale 1ns/10ps
+module control_signals();
+
+reg clock, clear;
+reg [3:0] present_state;
+
+reg HiIn, LoIn, ZIn, PCIn, MDRIn, MARIn, YIn, OPortIn, IRIn;
+initial {HiIn, LoIn, ZIn, PCIn, MDRIn, MARIn, YIn, OPortIn, IRIn} = 0;
+reg HiOut, LoOut, ZHiOut, ZLoOut, PCOut, MDROut, IPortOut, COut;
+initial {HiOut, LoOut, ZHiOut, ZLoOut, PCOut, MDROut, IPortOut, COut} = 0;
+
+reg [31:0] IPortInput = 0;
+
+reg Gra, Grb, Grc, RIn, ROut, BAOut;
+initial {Gra, Grb, Grc, RIn, ROut, BAOut} = 0;
+
+reg Conin = 0;
+wire ConOut;
+
+reg memread = 0, memwrite = 0;
+reg [4:0] ALUCode = 0;
+reg initMem = 0;
+
+ControlUnit cu(
+	clock, reset, stop, IR
+	HiIn, LoIn, ZIn, PCIn, MDRIn, MARIn, YIn, OPortIn, IRIn,
+	HiOut, LoOut, ZHiOut, ZLoOut, PCOut, MDROut, IPortOut, COut,
+	IPortInput,
+	Gra, Grb, Grc, RIn, ROut, BAOut,
+	Conin, ConOut,
+	memread, memwrite, 
+	ALUCode,
+	initMem
+);
+
+
+//states and clock control:
+parameter init1 = 4'd1, init2 = 4'd2, init3 = 4'd3, T0 = 4'd4, T1 = 4'd5, T2 = 4'd6, T3 = 4'd7, T4 = 4'd8, T5 = 4'd9, T6 = 4'd10, T7 = 4'd11;//can add more states here
+initial begin clock = 0; present_state = 4'd0; end
+always #10 clock = ~clock;
+always @ (negedge clock) present_state = present_state + 1;
+
+
+
+always @(present_state) begin
+	case(present_state)
+		reset_state: begin
+			InPortout = 0; Read = 0; Write = 0;
+			AND = 0; SHR = 0; ADD = 0;
+			HIin = 0; LOin = 0; CONin = 0; PCin = 0; IRin = 0; Yin = 0; Zin = 0;
+			MARin = 0; MDRin = 0; OutPortin = 0; Cout = 0; BAout = 0;
+			Grc = 0; Grb = 0; Gra = 0; Rout = 0; Rin = 0;
+			LOout = 0; HIout = 0; Zlowout = 0; Zhighout = 0; MDRout = 0; PCout = 0;
+			Clear = 0;
+			Run = 0;
+			CON_FF = 0; IR = 0; Stop = 0; Clock = 0; Reset = 0; Interrupts = 0;
+			#10 Run = 1;
+		end
+		T0: begin
+			PCout = 1; MARin = 1; IncPC = 1; Zin = 1;
+			#15 PCOut = 0; MARIn = 0; ALUCode = 5'b0; ZIn = 0;
+		end
+		T1: begin
+			Zlowout = 1; PCin = 1; Read = 1; MDRin = 1;
+			#15 Zlowout = 0; PCin = 0; Read = 0; MDRin = 0;
+		end
+		T2: begin
+			MDROut = 1; IRIn = 1;
+			#15 MDROut = 0; IRIn = 0;
+		end
+		T3: begin
+			Grb = 1; ROut = 1; YIn = 1;
+			#15 Grb = 0; ROut = 0; YIn = 0;
+		end
+		T4: begin
+			COut = 1; ALUCode = 5'b00011; ZIn = 1;
+			#15 COut = 0; ZIn = 0;
+		end
+		T5: begin
+			ZLoOut = 1; Gra = 1; RIn = 1;
+			#15 ZLoOut = 0; Gra = 0; RIn = 0;
+		end
+		T6: begin
+
+		end
+		T7: begin
+
+		end
+	endcase
+end
+endmodule 

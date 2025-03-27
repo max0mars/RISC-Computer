@@ -1,7 +1,23 @@
 module DataPath(
-	input wire clock,
+	input wire clock, clear,
+	
+	//register enable signals (R0-R15 is done by Select/Encode)
+	input wire HiIn, LoIn, ZIn, PCIn, MDRIn, MARIn, YIn, OPortIn, IRIn, //Added MARIn, OPortIn, IRin for phase 2
+	
+	//register select signals (BusMux) (R0-R15 is done by Select/Encode)
+	input wire HiSel, LoSel, ZHiSel, ZLoSel, PCSel, MDRSel, IPortSel, CSel,//Added IPortSel for phase 2
 	
 	input wire [31:0] IPortInput,
+	
+	
+	input wire Gra, Grb, Grc, RIn, ROut, BAOut,
+	
+	input wire ConIn, 
+	output wire ConOut,
+	
+	//removed Mdata for phase 2
+	input wire memread, memwrite,// added for phase 2
+	input wire [4:0] ALUCode,
 	
 	input wire initMem
 );
@@ -9,26 +25,8 @@ module DataPath(
 wire [15:0] regIn;//register enable signal
 wire [31:0] regVal [15:0];//register output value
 wire [31:0] BusVal;//bus line after mux
-wire Gra, Grb, Grc, RIn, ROut, BAOut;
-wire ConIn, ConOut;
-wire HiIn, LoIn, ZIn, PCIn, MDRIn, MARIn, YIn, OPortIn, IRIn;
-wire HiSel, LoSel, ZHiSel, ZLoSel, PCSel, MDRSel, IPortSel, CSel;
-wire memread, memwrite;
-wire clear, run, reset, stop;
 
-wire [4:0] ALUCode;
-wire [31:0] HiVal, LoVal, ZHiVal, ZLoVal, PCVal, MDRVal, MARVal, YVal, OPortVal, IPortVal, IRVal;
 
-control_unit(
-	.Gra(Gra), .Grb(Grb), .Grc(Grc), .RIn(RIn), .ROut(ROut), .BAOut(BAOut),
-	.CONin(ConIn),
-	.HiIn(HiIn), .LoIn(LoIn), .ZIn(ZIn), .PCIn(PCIn), .MDRIn(MDRIn), .MARIn(MARIn), .YIn(YIn), .OPortIn(OPortIn), .IRIn(IRIn),
-	.HiOut(HiSel), .LoOut(LoSel), .ZHiOut(ZHiSel), .ZLoOut(ZLoSel), .PCOut(PCSel), .MDROut(MDRSel), .IPortOut(IPortSel), .COut(CSel),
-	.Read(memread), .Write(memwrite), .Clear(clear), .Run(run),
-	.ALUCode(ALUCode),
-	.IR(IRVal),
-	.Clock(clock), .Reset(reset), .Stop(stop)
-);
 
 
 //BASIC REGISTERS START
@@ -41,7 +39,7 @@ for (i = 1; i < 16; i=i+1)
 endgenerate
 
 
- // added MARval, OPortVal, IPortVal for phase 2
+wire [31:0] HiVal, LoVal, ZHiVal, ZLoVal, PCVal, MDRVal, MARVal, YVal, OPortVal, IPortVal, IRVal; // added MARval, OPortVal, IPortVal for phase 2
 
 register hi (clear, clock, HiIn, BusVal, HiVal);
 register lo (clear, clock, LoIn, BusVal, LoVal);
@@ -80,18 +78,15 @@ ALU alu (YVal, BusVal, ALUCode, ALUresult);
 select_and_encode SelEnc(Gra, Grb, Grc, IRVal, RIn, ROut, BAOut, regIn, regSel);
 
 
+wire _ConOut;
+CON_FF conff(ConIn, BusVal, IRVal[20:19], _ConOut);
 
-CON_FF conff(ConIn, BusVal, IRVal[20:19], ConOut);
 
+assign ConOut = _ConOut;
 
 
 RAM ram (memread, memwrite, MARVal[8:0], BusVal, MdataOut, initMem); // added for phase 2
 
 
 MDR mdr(clear, clock, MDRIn, BusVal, MdataOut, memread, MDRVal);
-
-
-
-
-
 endmodule
