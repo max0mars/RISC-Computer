@@ -32,14 +32,28 @@ control_unit(
 
 
 //BASIC REGISTERS START
-genvar i;//generate R1 to R15
-generate
-for (i = 1; i < 16; i=i+1)
-	begin: registers
-		register r (clear, clock, regIn[i], BusVal, regVal[i]);
-	end
-endgenerate
-
+//genvar i;//generate R1 to R15
+//generate
+//for (i = 1; i < 16; i=i+1)
+//	begin: registers
+//		register r (clear, clock, regIn[i], BusVal, regVal[i]);
+//	end
+//endgenerate
+register r1(clear, clock, regIn[1], BusVal, regVal[1]);
+register r2(clear, clock, regIn[2], BusVal, regVal[2]);
+register r3(clear, clock, regIn[3], BusVal, regVal[3]);
+register r4(clear, clock, regIn[4], BusVal, regVal[4]);
+register r5(clear, clock, regIn[5], BusVal, regVal[5]);
+register r6(clear, clock, regIn[6], BusVal, regVal[6]);
+register r7(clear, clock, regIn[7], BusVal, regVal[7]);
+register r8(clear, clock, regIn[8], BusVal, regVal[8]);
+register r9(clear, clock, regIn[9], BusVal, regVal[9]);
+register r10(clear, clock, regIn[10], BusVal, regVal[10]);
+register r11(clear, clock, regIn[11], BusVal, regVal[11]);
+register r12(clear, clock, regIn[12], BusVal, regVal[12]);
+register r13(clear, clock, regIn[13], BusVal, regVal[13]);
+register r14(clear, clock, regIn[14], BusVal, regVal[14]);
+register r15(clear, clock, regIn[15], BusVal, regVal[15]);
 
  // added MARval, OPortVal, IPortVal for phase 2
 
