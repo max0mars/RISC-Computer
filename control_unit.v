@@ -88,9 +88,15 @@ always @(negedge Clock) begin
 					OP_mfhi: present_state = mfhi3;
 					OP_nop: present_state = nop;
 					OP_halt: present_state = halt;
-					default:;
+					default: present_state = reset_state;
 				endcase
 			end
+			ld3: present_state = ld4;
+			ld4: present_state = ld5;
+			ld5: present_state = ld6;
+			ld6: present_state = ld7;
+			ld7: present_state = T0;
+			//TODO: add transitions for all states
 		endcase
 	end
 end
