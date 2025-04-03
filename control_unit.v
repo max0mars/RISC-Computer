@@ -1,3 +1,4 @@
+`timescale 1ns/10ps
 module control_unit(
 output reg	Gra, Grb, Grc, Rin, Rout, BAout, CONin,
 				HIin, LOin, Zin, PCin, MDRin, MARin, Yin, OutPortin, IRin,
@@ -13,7 +14,7 @@ parameter OP_ld = 5'd0, OP_ldi = 5'd1, OP_st = 5'd2, OP_add = 5'd3, OP_sub = 5'd
 			OP_shra = 5'd10, OP_shl = 5'd11, OP_addi = 5'd12, OP_andi = 5'd13, OP_ori = 5'd14, OP_div = 5'd15, OP_mul = 5'd16, OP_neg = 5'd17, OP_not = 5'd18,
 			OP_br = 5'd19, OP_jal = 5'd20, OP_jr = 5'd21, OP_in = 5'd22, OP_out = 5'd23, OP_mflo = 5'd24, OP_mfhi = 5'd25, OP_nop = 5'd26, OP_halt = 5'd27;
 
-parameter reset_state = 7'd1, T0 = 7'd2, T1 = 7'd3, T2 = 7'd4, 
+parameter reset_state = 7'd0, T0 = 7'd2, T1 = 7'd3, T2 = 7'd4, 
 ld3 = 7'd5, ld4 = 7'd6, ld5 = 7'd7, ld6 = 7'd8, ld7 = 7'd9,//got it
 ldi3 = 7'd10, ldi4 = 7'd11, ldi5 = 7'd12,//got it
 st3 = 7'd13, st4 = 7'd14, st5 = 7'd15, st6 = 7'd16,//got it
@@ -243,7 +244,7 @@ always @(negedge Clock) begin
 			
 			// halt
 			
-			halt: present_state = T0;
+			halt: present_state = halt;
 		endcase
 	end
 end
@@ -349,7 +350,7 @@ always @(present_state) begin
 			#15 Grb = 0; Rout = 0; Yin = 0;
 		end
 		sub4: begin
-			Grc = 1; Rout = 1; ALUCode = 5'b00011; Zin = 1; //change code
+			Grc = 1; Rout = 1; ALUCode = 5'b00100; Zin = 1; //changed code
 			#15 Grc = 0; Rout = 0; Zin = 0;
 		end
 		sub5: begin
@@ -362,7 +363,7 @@ always @(present_state) begin
 			#15 Grb = 0; Rout = 0; Yin = 0;
 		end
 		and4: begin
-			Grc = 1; Rout = 1; ALUCode = 5'b00011; Zin = 1; //change code
+			Grc = 1; Rout = 1; ALUCode = 5'b00101; Zin = 1; //changed code
 			#15 Grc = 0; Rout = 0; Zin = 0;
 		end
 		and5: begin
@@ -375,7 +376,7 @@ always @(present_state) begin
 			#15 Grb = 0; Rout = 0; Yin = 0;
 		end
 		or4: begin
-			Grc = 1; Rout = 1; ALUCode = 5'b00011; Zin = 1; //change code
+			Grc = 1; Rout = 1; ALUCode = 5'b00110; Zin = 1; //changed code
 			#15 Grc = 0; Rout = 0; Zin = 0;
 		end
 		or5: begin
@@ -388,7 +389,7 @@ always @(present_state) begin
 			#15 Grb = 0; Rout = 0; Yin = 0;
 		end
 		ror4: begin
-			Grc = 1; Rout = 1; ALUCode = 5'b00011; Zin = 1; //change code
+			Grc = 1; Rout = 1; ALUCode = 5'b00111; Zin = 1; //changed code
 			#15 Grc = 0; Rout = 0; Zin = 0;
 		end
 		ror5: begin
@@ -401,7 +402,7 @@ always @(present_state) begin
 			#15 Grb = 0; Rout = 0; Yin = 0;
 		end
 		rol4: begin
-			Grc = 1; Rout = 1; ALUCode = 5'b00011; Zin = 1; //change code
+			Grc = 1; Rout = 1; ALUCode = 5'b01000; Zin = 1; //changed code
 			#15 Grc = 0; Rout = 0; Zin = 0;
 		end
 		rol5: begin
@@ -414,7 +415,7 @@ always @(present_state) begin
 			#15 Grb = 0; Rout = 0; Yin = 0;
 		end
 		shr4: begin
-			Grc = 1; Rout = 1; ALUCode = 5'b00011; Zin = 1; //change code
+			Grc = 1; Rout = 1; ALUCode = 5'b01001; Zin = 1; //changed code 
 			#15 Grc = 0; Rout = 0; Zin = 0;
 		end
 		shr5: begin
@@ -427,7 +428,7 @@ always @(present_state) begin
 			#15 Grb = 0; Rout = 0; Yin = 0;
 		end
 		shra4: begin
-			Grc = 1; Rout = 1; ALUCode = 5'b00011; Zin = 1; //change code
+			Grc = 1; Rout = 1; ALUCode = 5'b01010; Zin = 1; //changed code
 			#15 Grc = 0; Rout = 0; Zin = 0;
 		end
 		shra5: begin
@@ -440,7 +441,7 @@ always @(present_state) begin
 			#15 Grb = 0; Rout = 0; Yin = 0;
 		end
 		shl4: begin
-			Grc = 1; Rout = 1; ALUCode = 5'b00011; Zin = 1; //change code
+			Grc = 1; Rout = 1; ALUCode = 5'b01011; Zin = 1; //changed code
 			#15 Grc = 0; Rout = 0; Zin = 0;
 		end
 		shl5: begin
@@ -454,7 +455,7 @@ always @(present_state) begin
 			#15 Grb = 0; Rout = 0; Yin = 0;
 		end
 		addi4: begin
-			Cout = 1; ALUCode = 5'b00011; Zin = 1;
+			Cout = 1; ALUCode = 5'b00011; Zin = 1; 
 			#15 Cout = 0; Zin = 0;
 		end
 		addi5: begin
@@ -494,7 +495,7 @@ always @(present_state) begin
 			#15 Grb = 0; Rout = 0; Yin = 0;
 		end
 		div4: begin
-			Grc = 1; Rout = 1; ALUCode = 5'b00011; Zin = 1; //change code
+			Grc = 1; Rout = 1; ALUCode = 5'b01111; Zin = 1; //changed code
 			#15 Grc = 0; Rout = 0; Zin = 0;
 		end
 		div5: begin
@@ -507,7 +508,7 @@ always @(present_state) begin
 			#15 Grb = 0; Rout = 0; Yin = 0;
 		end
 		mul4: begin
-			Grc = 1; Rout = 1; ALUCode = 5'b00011; Zin = 1; //change code
+			Grc = 1; Rout = 1; ALUCode = 5'b10000; Zin = 1; //changed code
 			#15 Grc = 0; Rout = 0; Zin = 0;
 		end
 		mul5: begin
@@ -520,7 +521,7 @@ always @(present_state) begin
 			#15 Grb = 0; Rout = 0; Yin = 0;
 		end
 		neg4: begin
-			Grc = 1; Rout = 1; ALUCode = 5'b00011; Zin = 1; //change code
+			Grc = 1; Rout = 1; ALUCode = 5'b10001; Zin = 1; //changed code
 			#15 Grc = 0; Rout = 0; Zin = 0;
 		end
 		neg5: begin
@@ -533,7 +534,7 @@ always @(present_state) begin
 			#15 Grb = 0; Rout = 0; Yin = 0;
 		end
 		not4: begin
-			Grc = 1; Rout = 1; ALUCode = 5'b00011; Zin = 1; //change code
+			Grc = 1; Rout = 1; ALUCode = 5'b10010; Zin = 1; //changed code
 			#15 Grc = 0; Rout = 0; Zin = 0;
 		end
 		not5: begin

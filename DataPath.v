@@ -3,7 +3,8 @@ module DataPath(
 	
 	input wire [31:0] IPortInput,
 	
-	input wire initMem
+	input wire initMem,
+	input wire reset, stop
 );
 
 wire [15:0] regIn;//register enable signal
@@ -14,12 +15,12 @@ wire ConIn, ConOut;
 wire HiIn, LoIn, ZIn, PCIn, MDRIn, MARIn, YIn, OPortIn, IRIn;
 wire HiSel, LoSel, ZHiSel, ZLoSel, PCSel, MDRSel, IPortSel, CSel;
 wire memread, memwrite;
-wire clear, run, reset, stop;
+wire run;
 
 wire [4:0] ALUCode;
 wire [31:0] HiVal, LoVal, ZHiVal, ZLoVal, PCVal, MDRVal, MARVal, YVal, OPortVal, IPortVal, IRVal;
 
-control_unit(
+control_unit CU(
 	.Gra(Gra), .Grb(Grb), .Grc(Grc), .Rin(RIn), .Rout(ROut), .BAout(BAOut),
 	.CONin(ConIn),
 	.HIin(HiIn), .LOin(LoIn), .Zin(ZIn), .PCin(PCIn), .MDRin(MDRIn), .MARin(MARIn), .Yin(YIn), .OutPortin(OPortIn), .IRin(IRIn),
@@ -27,7 +28,7 @@ control_unit(
 	.Read(memread), .Write(memwrite), .Clear(clear), .Run(run),
 	.ALUCode(ALUCode),
 	.IR(IRVal),
-	.Clock(clock), .Reset(reset), .Stop(stop)
+	.Clock(clock), .Reset(reset), .Stop(stop), .CON_FF(ConOut)
 );
 
 
