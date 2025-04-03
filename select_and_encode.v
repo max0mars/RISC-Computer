@@ -19,7 +19,10 @@ assign Rc = IR[18:15];
 always @(*) begin
 	selected_reg = 4'b0000;
 	if (Gra) selected_reg = Ra;
-	else if (Grb) selected_reg = Rb;
+	else if (Grb) begin
+		if(IR[31:27] == 5'd20) selected_reg = 4'd8;//JAL must store current PC in R8
+		else selected_reg = Rb;
+	end
 	else if (Grc) selected_reg = Rc;
 	
 	R_In <= 16'b0;
