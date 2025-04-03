@@ -12,283 +12,283 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer {C:/Users/20mbm14/Desktop/RISC-Computer/Zregister.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:37 on Apr 02,2025
+# Start time: 23:14:11 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer" C:/Users/20mbm14/Desktop/RISC-Computer/Zregister.v 
 # -- Compiling module Zregister
 # 
 # Top level modules:
 # 	Zregister
-# End time: 22:05:37 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:11 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer {C:/Users/20mbm14/Desktop/RISC-Computer/select_and_encode.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:37 on Apr 02,2025
+# Start time: 23:14:11 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer" C:/Users/20mbm14/Desktop/RISC-Computer/select_and_encode.v 
 # -- Compiling module select_and_encode
 # 
 # Top level modules:
 # 	select_and_encode
-# End time: 22:05:37 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:11 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer {C:/Users/20mbm14/Desktop/RISC-Computer/register.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:37 on Apr 02,2025
+# Start time: 23:14:11 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer" C:/Users/20mbm14/Desktop/RISC-Computer/register.v 
 # -- Compiling module register
 # 
 # Top level modules:
 # 	register
-# End time: 22:05:37 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:11 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer {C:/Users/20mbm14/Desktop/RISC-Computer/RAM.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:37 on Apr 02,2025
+# Start time: 23:14:11 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer" C:/Users/20mbm14/Desktop/RISC-Computer/RAM.v 
 # -- Compiling module RAM
 # ** Warning: C:/Users/20mbm14/Desktop/RISC-Computer/RAM.v(15): (vlog-2182) 'mem' might be read before written in always_comb or always @* block.
 # 
 # Top level modules:
 # 	RAM
-# End time: 22:05:37 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:11 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer {C:/Users/20mbm14/Desktop/RISC-Computer/r0_Register.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:37 on Apr 02,2025
+# Start time: 23:14:11 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer" C:/Users/20mbm14/Desktop/RISC-Computer/r0_Register.v 
 # -- Compiling module r0_Register
 # 
 # Top level modules:
 # 	r0_Register
-# End time: 22:05:37 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:11 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer {C:/Users/20mbm14/Desktop/RISC-Computer/MDR.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:37 on Apr 02,2025
+# Start time: 23:14:11 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer" C:/Users/20mbm14/Desktop/RISC-Computer/MDR.v 
 # -- Compiling module MDR
 # 
 # Top level modules:
 # 	MDR
-# End time: 22:05:37 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:11 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer {C:/Users/20mbm14/Desktop/RISC-Computer/Inport_Reg.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:37 on Apr 02,2025
+# Start time: 23:14:11 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer" C:/Users/20mbm14/Desktop/RISC-Computer/Inport_Reg.v 
 # -- Compiling module Inport_Reg
 # 
 # Top level modules:
 # 	Inport_Reg
-# End time: 22:05:37 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:11 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer {C:/Users/20mbm14/Desktop/RISC-Computer/Encoder32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:37 on Apr 02,2025
+# Start time: 23:14:11 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer" C:/Users/20mbm14/Desktop/RISC-Computer/Encoder32.v 
 # -- Compiling module Encoder32
 # ** Warning: C:/Users/20mbm14/Desktop/RISC-Computer/Encoder32.v(2): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
 # 
 # Top level modules:
 # 	Encoder32
-# End time: 22:05:38 on Apr 02,2025, Elapsed time: 0:00:01
+# End time: 23:14:11 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer {C:/Users/20mbm14/Desktop/RISC-Computer/DataPath.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:38 on Apr 02,2025
+# Start time: 23:14:11 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer" C:/Users/20mbm14/Desktop/RISC-Computer/DataPath.v 
 # -- Compiling module DataPath
 # 
 # Top level modules:
 # 	DataPath
-# End time: 22:05:38 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:11 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer {C:/Users/20mbm14/Desktop/RISC-Computer/CON_FF.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:38 on Apr 02,2025
+# Start time: 23:14:11 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer" C:/Users/20mbm14/Desktop/RISC-Computer/CON_FF.v 
 # -- Compiling module CON_FF
 # 
 # Top level modules:
 # 	CON_FF
-# End time: 22:05:38 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:11 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer {C:/Users/20mbm14/Desktop/RISC-Computer/Bus.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:38 on Apr 02,2025
+# Start time: 23:14:11 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer" C:/Users/20mbm14/Desktop/RISC-Computer/Bus.v 
 # -- Compiling module Bus
 # 
 # Top level modules:
 # 	Bus
-# End time: 22:05:38 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:11 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer {C:/Users/20mbm14/Desktop/RISC-Computer/ALU.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:38 on Apr 02,2025
+# Start time: 23:14:11 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer" C:/Users/20mbm14/Desktop/RISC-Computer/ALU.v 
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# End time: 22:05:38 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:11 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations {C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/subtract_bits.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:38 on Apr 02,2025
+# Start time: 23:14:11 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations" C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/subtract_bits.v 
 # -- Compiling module subtract_bits
 # ** Warning: C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/subtract_bits.v(30): (vlog-2182) 'local_carry' might be read before written in always_comb or always @* block.
 # 
 # Top level modules:
 # 	subtract_bits
-# End time: 22:05:38 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:11 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations {C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/rotate_right_bits.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:38 on Apr 02,2025
+# Start time: 23:14:11 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations" C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/rotate_right_bits.v 
 # -- Compiling module rotate_right_bits
 # 
 # Top level modules:
 # 	rotate_right_bits
-# End time: 22:05:38 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:11 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations {C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/rotate_left_bits.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:38 on Apr 02,2025
+# Start time: 23:14:11 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations" C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/rotate_left_bits.v 
 # -- Compiling module rotate_left_bits
 # 
 # Top level modules:
 # 	rotate_left_bits
-# End time: 22:05:38 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:11 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations {C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/or_bits.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:38 on Apr 02,2025
+# Start time: 23:14:11 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations" C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/or_bits.v 
 # -- Compiling module or_bits
 # 
 # Top level modules:
 # 	or_bits
-# End time: 22:05:38 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:11 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations {C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/not_bits.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:38 on Apr 02,2025
+# Start time: 23:14:12 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations" C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/not_bits.v 
 # -- Compiling module not_bits
 # 
 # Top level modules:
 # 	not_bits
-# End time: 22:05:38 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:12 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations {C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/negate_bits.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:38 on Apr 02,2025
+# Start time: 23:14:12 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations" C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/negate_bits.v 
 # -- Compiling module negate_bits
 # 
 # Top level modules:
 # 	negate_bits
-# End time: 22:05:38 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:12 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations {C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/mul_bits.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:38 on Apr 02,2025
+# Start time: 23:14:12 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations" C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/mul_bits.v 
 # -- Compiling module mul_bits
 # 
 # Top level modules:
 # 	mul_bits
-# End time: 22:05:38 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:12 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations {C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/logical_shift_right_bits.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:38 on Apr 02,2025
+# Start time: 23:14:12 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations" C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/logical_shift_right_bits.v 
 # -- Compiling module logical_shift_right_bits
 # 
 # Top level modules:
 # 	logical_shift_right_bits
-# End time: 22:05:38 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:12 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations {C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/logical_shift_left_bits.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:38 on Apr 02,2025
+# Start time: 23:14:12 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations" C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/logical_shift_left_bits.v 
 # -- Compiling module logical_shift_left_bits
 # 
 # Top level modules:
 # 	logical_shift_left_bits
-# End time: 22:05:38 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:12 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations {C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/div_bits.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:38 on Apr 02,2025
+# Start time: 23:14:12 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations" C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/div_bits.v 
 # -- Compiling module div_bits
 # 
 # Top level modules:
 # 	div_bits
-# End time: 22:05:38 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:12 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations {C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/arithmetic_shift_right_bits.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:38 on Apr 02,2025
+# Start time: 23:14:12 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations" C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/arithmetic_shift_right_bits.v 
 # -- Compiling module arithmetic_shift_right_bits
 # 
 # Top level modules:
 # 	arithmetic_shift_right_bits
-# End time: 22:05:38 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:12 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations {C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/Andbits.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:38 on Apr 02,2025
+# Start time: 23:14:12 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations" C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/Andbits.v 
 # -- Compiling module Andbits
 # 
 # Top level modules:
 # 	Andbits
-# End time: 22:05:38 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:12 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations {C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/add_bits.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:38 on Apr 02,2025
+# Start time: 23:14:12 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations" C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/add_bits.v 
 # -- Compiling module add_bits
 # ** Warning: C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/add_bits.v(19): (vlog-2182) 'local_carry' might be read before written in always_comb or always @* block.
 # 
 # Top level modules:
 # 	add_bits
-# End time: 22:05:38 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:12 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer {C:/Users/20mbm14/Desktop/RISC-Computer/control_unit.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:38 on Apr 02,2025
+# Start time: 23:14:12 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer" C:/Users/20mbm14/Desktop/RISC-Computer/control_unit.v 
 # -- Compiling module control_unit
 # 
 # Top level modules:
 # 	control_unit
-# End time: 22:05:38 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:12 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer {C:/Users/20mbm14/Desktop/RISC-Computer/DEMO_phase3.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:05:38 on Apr 02,2025
+# Start time: 23:14:12 on Apr 02,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20mbm14/Desktop/RISC-Computer" C:/Users/20mbm14/Desktop/RISC-Computer/DEMO_phase3.v 
 # -- Compiling module DEMO_phase3
 # 
 # Top level modules:
 # 	DEMO_phase3
-# End time: 22:05:38 on Apr 02,2025, Elapsed time: 0:00:00
+# End time: 23:14:12 on Apr 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  DEMO_phase3
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" DEMO_phase3 
-# Start time: 22:05:38 on Apr 02,2025
+# Start time: 23:14:12 on Apr 02,2025
 # Loading work.DEMO_phase3
 # Loading work.DataPath
 # Loading work.control_unit
@@ -323,10 +323,39 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 20 us
-add wave -position insertpoint sim:/DEMO_phase3/dp/CU/*
-restart; run 1us
-add wave -position insertpoint sim:/DEMO_phase3/dp/pc/*
-restart; run 500ns
+add wave -position insertpoint  \
+sim:/DEMO_phase3/dp/r12/q
+restart; run 6us
+add wave -position insertpoint sim:/DEMO_phase3/dp/r8/*
+restart; run 9us
 # GetModuleFileName: The specified module could not be found.
 # 
 # 
+restart; run 15us
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+add wave -position insertpoint  \
+sim:/DEMO_phase3/dp/pc/q
+restart; run 15us
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+add wave -position insertpoint  \
+sim:/DEMO_phase3/dp/CU/present_state
+restart; run 15us
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+add wave -position insertpoint  \
+sim:/DEMO_phase3/dp/r15/q
+add wave -position insertpoint  \
+sim:/DEMO_phase3/dp/r14/q
+add wave -position insertpoint  \
+sim:/DEMO_phase3/dp/r15/q
+restart; run 15us
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# End time: 23:19:34 on Apr 02,2025, Elapsed time: 0:05:22
+# Errors: 0, Warnings: 0

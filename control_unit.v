@@ -14,7 +14,7 @@ parameter OP_ld = 5'd0, OP_ldi = 5'd1, OP_st = 5'd2, OP_add = 5'd3, OP_sub = 5'd
 			OP_shra = 5'd10, OP_shl = 5'd11, OP_addi = 5'd12, OP_andi = 5'd13, OP_ori = 5'd14, OP_div = 5'd15, OP_mul = 5'd16, OP_neg = 5'd17, OP_not = 5'd18,
 			OP_br = 5'd19, OP_jal = 5'd20, OP_jr = 5'd21, OP_in = 5'd22, OP_out = 5'd23, OP_mflo = 5'd24, OP_mfhi = 5'd25, OP_nop = 5'd26, OP_halt = 5'd27;
 
-parameter reset_state = 7'd0, T0 = 7'd2, T1 = 7'd3, T2 = 7'd4, 
+parameter first = 7'd0, reset_state = 7'd1, T0 = 7'd2, T1 = 7'd3, T2 = 7'd4, 
 ld3 = 7'd5, ld4 = 7'd6, ld5 = 7'd7, ld6 = 7'd8, ld7 = 7'd9,//got it
 ldi3 = 7'd10, ldi4 = 7'd11, ldi5 = 7'd12,//got it
 st3 = 7'd13, st4 = 7'd14, st5 = 7'd15, st6 = 7'd16,//got it
@@ -30,8 +30,8 @@ shl3 = 7'd41, shl4 = 7'd42, shl5 = 7'd43,
 addi3 = 7'd44, addi4 = 7'd45, addi5 = 7'd46,//got it
 andi3 = 7'd47, andi4 = 7'd48, andi5 = 7'd49,//got it
 ori3 = 7'd50, ori4 = 7'd51, ori5 = 7'd52,//got it
-div3 = 7'd53, div4 = 7'd54, div5 = 7'd55,
-mul3 = 7'd56, mul4 = 7'd57, mul5 = 7'd58,
+div3 = 7'd53, div4 = 7'd54, div5 = 7'd55, div6 = 7'd80,//out of order
+mul3 = 7'd56, mul4 = 7'd57, mul5 = 7'd58, mul6 = 7'd81,//outof order
 neg3 = 7'd59, neg4 = 7'd60, neg5 = 7'd61,
 not3 = 7'd62, not4 = 7'd63, not5 = 7'd64,
 br3 = 7'd65, br4 = 7'd66, br5 = 7'd67, br6 = 7'd68,//got it
@@ -53,6 +53,7 @@ always @(negedge Clock) begin
 		stoped = 0;
 	end else begin
 		case (present_state)
+			first: present_state = reset_state;
 			reset_state: begin
 				present_state = T0;
 			end
@@ -186,13 +187,15 @@ always @(negedge Clock) begin
 
 			div3: present_state = div4;
 			div4: present_state = div5;
-			div5: present_state = T0;
+			div5: present_state = div6;
+			div6: present_state = T0;
 			
 			//mul
 
 			mul3: present_state = mul4;
 			mul4: present_state = mul5;
-			mul5: present_state = T0;
+			mul5: present_state = mul6;
+			mul6: present_state = T0;
 			
 			//neg
 
@@ -248,8 +251,6 @@ always @(negedge Clock) begin
 		endcase
 	end
 end
-
-
 
 always @(present_state) begin
 	case(present_state)
@@ -477,7 +478,7 @@ always @(present_state) begin
 		end
 		// ori States
 		ori3: begin
-			Grb = 1; Rout = 1; Rin = 1;
+			Grb = 1; Rout = 1; Yin = 1;
 			#15 Grb = 0; Rout = 0; Yin = 0;
 		end
 		ori4: begin
@@ -491,29 +492,37 @@ always @(present_state) begin
 
 		//div
 		div3: begin
-			Grb = 1; Rout = 1; Yin = 1;
-			#15 Grb = 0; Rout = 0; Yin = 0;
+			Gra = 1; Rout = 1; Yin = 1;
+			#15 Gra = 0; Rout = 0; Yin = 0;
 		end
 		div4: begin
-			Grc = 1; Rout = 1; ALUCode = 5'b01111; Zin = 1; //changed code
-			#15 Grc = 0; Rout = 0; Zin = 0;
+			Grb = 1; Rout = 1; ALUCode = 5'b01111; Zin = 1; //changed code
+			#15 Grb = 0; Rout = 0; Zin = 0;
 		end
 		div5: begin
-			Zlowout = 1; Gra = 1; Rin = 1;
-			#15 Zlowout = 0; Gra = 0; Rin = 0;
+			Zlowout = 1; LOin = 1;
+			#15 Zlowout = 0; LOin = 0;
+		end
+		div6: begin
+			Zhighout = 1; HIin = 1;
+			#15 Zhighout = 0; HIin = 0;
 		end
 		//mul
 		mul3: begin
-			Grb = 1; Rout = 1; Yin = 1;
-			#15 Grb = 0; Rout = 0; Yin = 0;
+			Gra = 1; Rout = 1; Yin = 1;
+			#15 Gra = 0; Rout = 0; Yin = 0;
 		end
 		mul4: begin
-			Grc = 1; Rout = 1; ALUCode = 5'b10000; Zin = 1; //changed code
-			#15 Grc = 0; Rout = 0; Zin = 0;
+			Grb = 1; Rout = 1; ALUCode = 5'b10000; Zin = 1; //changed code
+			#15 Grb = 0; Rout = 0; Zin = 0;
 		end
 		mul5: begin
-			Zlowout = 1; Gra = 1; Rin = 1;
-			#15 Zlowout = 0; Gra = 0; Rin = 0;
+			Zlowout = 1; LOin = 1;
+			#15 Zlowout = 0; LOin = 0;
+		end
+		mul6: begin
+			Zhighout = 1; HIin = 1;
+			#15 Zhighout = 0; HIin = 0;
 		end
 		//neg
 		neg3: begin
@@ -599,6 +608,16 @@ always @(present_state) begin
 		mfhi3: begin
 			Gra = 1; Rin = 1; HIout = 1;
 			#15 Gra = 0; Rin = 0; HIout = 0;
+		end
+		halt: begin
+			InPortout = 0; Read = 0; Write = 0;
+			HIin = 0; LOin = 0; CONin = 0; PCin = 0; IRin = 0; Yin = 0; Zin = 0;
+			MARin = 0; MDRin = 0; OutPortin = 0; Cout = 0; BAout = 0;
+			Grc = 0; Grb = 0; Gra = 0; Rout = 0; Rin = 0;
+			LOout = 0; HIout = 0; Zlowout = 0; Zhighout = 0; MDRout = 0; PCout = 0;
+			ALUCode = 0;
+			Clear = 0;
+			Run = 0;
 		end
 	endcase
 end

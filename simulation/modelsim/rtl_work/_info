@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/20mbm14/Desktop/RISC-Computer/simulation/modelsim
 vadd_bits
-Z1 !s110 1743645938
+Z1 !s110 1743650052
 !i10b 1
 !s100 cK0ihgCCa2?3Jg16;04C=0
 IDAU_Q4P7;DWOYV=?GZhJV2
@@ -23,7 +23,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1743645938.000000
+Z5 !s108 1743650052.000000
 !s107 C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/add_bits.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations|C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/add_bits.v|
 !i113 1
@@ -31,13 +31,13 @@ Z6 o-vlog01compat -work work
 Z7 !s92 -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations
 Z8 tCvgOpt 0
 vALU
-R1
+Z9 !s110 1743650051
 !i10b 1
 !s100 ^DLfi`B2l>cMBSM[jjdDh3
 IWS4:n_CzdNmBVjaMDO0V<0
 R2
 R0
-R3
+w1743646259
 8C:/Users/20mbm14/Desktop/RISC-Computer/ALU.v
 FC:/Users/20mbm14/Desktop/RISC-Computer/ALU.v
 L0 1
@@ -45,12 +45,12 @@ R4
 r1
 !s85 0
 31
-R5
+Z10 !s108 1743650051.000000
 !s107 C:/Users/20mbm14/Desktop/RISC-Computer/ALU.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20mbm14/Desktop/RISC-Computer|C:/Users/20mbm14/Desktop/RISC-Computer/ALU.v|
 !i113 1
 R6
-Z9 !s92 -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer
+Z11 !s92 -vlog01compat -work work +incdir+C:/Users/20mbm14/Desktop/RISC-Computer
 R8
 n@a@l@u
 vAndbits
@@ -99,7 +99,7 @@ R6
 R7
 R8
 vBus
-R1
+R9
 !i10b 1
 !s100 nkWEC@QHo2E;Z;>zXh=Mk0
 I=5Z?fHhQkcDScg63>VQU23
@@ -113,16 +113,16 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/20mbm14/Desktop/RISC-Computer/Bus.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20mbm14/Desktop/RISC-Computer|C:/Users/20mbm14/Desktop/RISC-Computer/Bus.v|
 !i113 1
 R6
-R9
+R11
 R8
 n@bus
 vCON_FF
-R1
+R9
 !i10b 1
 !s100 :V5_DfbN9CiUig=l48;9E0
 ImnDIQ<[n`^jeb=E@F@n=h1
@@ -136,22 +136,22 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/20mbm14/Desktop/RISC-Computer/CON_FF.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20mbm14/Desktop/RISC-Computer|C:/Users/20mbm14/Desktop/RISC-Computer/CON_FF.v|
 !i113 1
 R6
-R9
+R11
 R8
 n@c@o@n_@f@f
 vcontrol_unit
 R1
 !i10b 1
-!s100 _50oKb:5B]ZlhH]>Z9aGG1
-IK3UCL8AbdPz?_S8N2nfLU0
+!s100 CMOM_32:kLAFlOgb^NloQ2
+ITCaI>E6R>WejKoaB9kk550
 R2
 R0
-w1743645908
+w1743650002
 8C:/Users/20mbm14/Desktop/RISC-Computer/control_unit.v
 FC:/Users/20mbm14/Desktop/RISC-Computer/control_unit.v
 L0 2
@@ -164,10 +164,10 @@ R5
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20mbm14/Desktop/RISC-Computer|C:/Users/20mbm14/Desktop/RISC-Computer/control_unit.v|
 !i113 1
 R6
-R9
+R11
 R8
 vDataPath
-R1
+R9
 !i10b 1
 !s100 ?`7LBDK6ibgnl84zcMS093
 IAoPbB<JbB0cA1i=KJnlk?1
@@ -181,22 +181,22 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/20mbm14/Desktop/RISC-Computer/DataPath.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20mbm14/Desktop/RISC-Computer|C:/Users/20mbm14/Desktop/RISC-Computer/DataPath.v|
 !i113 1
 R6
-R9
+R11
 R8
 n@data@path
 vDEMO_phase3
 R1
 !i10b 1
-!s100 FIk@QL8Z>;JQgKekDP9Tn0
-Io<KnP<3`ck74SOag?zAV92
+!s100 ><i3_5>JGo_kZWPXV]1n`3
+IHg<]bU`X`AN<nB;9nmY031
 R2
 R0
-w1743645811
+w1743649604
 8C:/Users/20mbm14/Desktop/RISC-Computer/DEMO_phase3.v
 FC:/Users/20mbm14/Desktop/RISC-Computer/DEMO_phase3.v
 L0 3
@@ -209,7 +209,7 @@ R5
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20mbm14/Desktop/RISC-Computer|C:/Users/20mbm14/Desktop/RISC-Computer/DEMO_phase3.v|
 !i113 1
 R6
-R9
+R11
 R8
 n@d@e@m@o_phase3
 vdiv_bits
@@ -235,7 +235,7 @@ R6
 R7
 R8
 vEncoder32
-R1
+R9
 !i10b 1
 !s100 KIkzGj:PgVL`4_<[:jWj@0
 IA3BaoP>5bf<A17@A3]c_i0
@@ -249,16 +249,16 @@ R4
 r1
 !s85 0
 31
-Z10 !s108 1743645937.000000
+R10
 !s107 C:/Users/20mbm14/Desktop/RISC-Computer/Encoder32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20mbm14/Desktop/RISC-Computer|C:/Users/20mbm14/Desktop/RISC-Computer/Encoder32.v|
 !i113 1
 R6
-R9
+R11
 R8
 n@encoder32
 vInport_Reg
-Z11 !s110 1743645937
+R9
 !i10b 1
 !s100 E;TE<@Vjg@Io5eF]hah0A0
 I;c12Dh_G]>Gji_ZhZ:SF60
@@ -277,7 +277,7 @@ R10
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20mbm14/Desktop/RISC-Computer|C:/Users/20mbm14/Desktop/RISC-Computer/Inport_Reg.v|
 !i113 1
 R6
-R9
+R11
 R8
 n@inport_@reg
 vlogical_shift_left_bits
@@ -325,7 +325,7 @@ R6
 R7
 R8
 vMDR
-R11
+R9
 !i10b 1
 !s100 K]@_c?NX@HcI:G1Lah>?T3
 IZ[LA??mP=AP7V<3?>]]=;0
@@ -344,7 +344,7 @@ R10
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20mbm14/Desktop/RISC-Computer|C:/Users/20mbm14/Desktop/RISC-Computer/MDR.v|
 !i113 1
 R6
-R9
+R11
 R8
 n@m@d@r
 vmul_bits
@@ -414,7 +414,7 @@ R6
 R7
 R8
 vor_bits
-R1
+R9
 !i10b 1
 !s100 ;X;nT0[SN]Se;8WO38EDV3
 IOeg[_56HFWLR:GaF9A67k2
@@ -428,7 +428,7 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/or_bits.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations|C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/or_bits.v|
 !i113 1
@@ -436,7 +436,7 @@ R6
 R7
 R8
 vr0_Register
-R11
+R9
 !i10b 1
 !s100 Oc5D4A@OcB?V<5Pk5o2Xj2
 I>4IZ>AV<Tn^IdJ@6=O3_G0
@@ -455,17 +455,17 @@ R10
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20mbm14/Desktop/RISC-Computer|C:/Users/20mbm14/Desktop/RISC-Computer/r0_Register.v|
 !i113 1
 R6
-R9
+R11
 R8
 nr0_@register
 vRAM
-R11
+R9
 !i10b 1
-!s100 d<QBH1bHoG3:cH[GG_>YK2
-Iee[f_IZ^VAG`7a8oOaZ?R2
+!s100 Y1o>9ncgg>8?_j_R7[;Qa3
+ITPWeAoXdJCPzjh^JLBG8o0
 R2
 R0
-w1743642833
+w1743650011
 8C:/Users/20mbm14/Desktop/RISC-Computer/RAM.v
 FC:/Users/20mbm14/Desktop/RISC-Computer/RAM.v
 L0 1
@@ -478,11 +478,11 @@ R10
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20mbm14/Desktop/RISC-Computer|C:/Users/20mbm14/Desktop/RISC-Computer/RAM.v|
 !i113 1
 R6
-R9
+R11
 R8
 n@r@a@m
 vregister
-R11
+R9
 !i10b 1
 !s100 2Ol:[IG8DeFUg4AHK;@@>0
 IRjoEVEellXCMhWE8TH:Q_1
@@ -501,10 +501,10 @@ R10
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20mbm14/Desktop/RISC-Computer|C:/Users/20mbm14/Desktop/RISC-Computer/register.v|
 !i113 1
 R6
-R9
+R11
 R8
 vrotate_left_bits
-R1
+R9
 !i10b 1
 !s100 la5R7N0a8AAgUfSTGn:bT3
 Io6KZbdOLz8iW^ejI5L^Fg1
@@ -518,7 +518,7 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/rotate_left_bits.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations|C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/rotate_left_bits.v|
 !i113 1
@@ -526,7 +526,7 @@ R6
 R7
 R8
 vrotate_right_bits
-R1
+R9
 !i10b 1
 !s100 b@YVQC<zL`5<VKjZE<jk<0
 IzID4m=9CLeMloVOHmdShB0
@@ -540,7 +540,7 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/rotate_right_bits.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations|C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/rotate_right_bits.v|
 !i113 1
@@ -548,7 +548,7 @@ R6
 R7
 R8
 vselect_and_encode
-R11
+R9
 !i10b 1
 !s100 zMaSOjPRJ4<dY]g_GI:S^3
 IiOe36iP2Q876M@S3;5M3f2
@@ -567,10 +567,10 @@ R10
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20mbm14/Desktop/RISC-Computer|C:/Users/20mbm14/Desktop/RISC-Computer/select_and_encode.v|
 !i113 1
 R6
-R9
+R11
 R8
 vsubtract_bits
-R1
+R9
 !i10b 1
 !s100 PnWA;[ffIgh8JlgW^UNQb1
 IA5Ml[;Jo?dS0JP8RJ;la?2
@@ -584,7 +584,7 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/subtract_bits.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations|C:/Users/20mbm14/Desktop/RISC-Computer/ALU_Operations/subtract_bits.v|
 !i113 1
@@ -592,7 +592,7 @@ R6
 R7
 R8
 vZregister
-R11
+R9
 !i10b 1
 !s100 87oLQHP;Vcz>EbRS2SJ553
 I9TOO<U`TcZLQ@>NIb_[Ff2
@@ -611,6 +611,6 @@ R10
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20mbm14/Desktop/RISC-Computer|C:/Users/20mbm14/Desktop/RISC-Computer/Zregister.v|
 !i113 1
 R6
-R9
+R11
 R8
 n@zregister

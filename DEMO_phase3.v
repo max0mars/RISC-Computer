@@ -3,7 +3,6 @@
 module DEMO_phase3();
 
 reg clock, initmem;
-reg [3:0] present_state;
 reg [31:0] in;
 reg clear, reset, stop;
 reg start;
