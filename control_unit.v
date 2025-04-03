@@ -91,12 +91,159 @@ always @(negedge Clock) begin
 					default: present_state = reset_state;
 				endcase
 			end
+			// ld States
 			ld3: present_state = ld4;
 			ld4: present_state = ld5;
 			ld5: present_state = ld6;
 			ld6: present_state = ld7;
 			ld7: present_state = T0;
-			//TODO: add transitions for all states
+			
+			// ldi States
+			ldi3: present_state = ldi4;
+			ldi4: present_state = ldi5;
+			ldi5: present_state = T0;
+			
+			// st states
+			st3: present_state = st4;
+			st4: present_state = st5;
+			st5: present_state = st6;
+			st6: present_state = T0;
+			
+			// add 
+						
+			add3: present_state = add4;
+			add4: present_state = add5;
+			add5: present_state = T0;
+			
+			//sub 
+
+			sub3: present_state = sub4;
+			sub4: present_state = sub5;
+			sub5: present_state = T0;
+			
+			// and
+
+			and3: present_state = and4;
+			and4: present_state = and5;
+			and5: present_state = T0;
+			
+			// or
+
+			or3: present_state = or4;
+			or4: present_state = or5;
+			or5: present_state = T0;
+			
+			//ror
+
+			ror3: present_state = ror4;
+			ror4: present_state = ror5;
+			ror5: present_state = T0;
+			
+			//rol
+
+			rol3: present_state = rol4;
+			rol4: present_state = rol5;
+			rol5: present_state = T0;
+			
+			//shr
+
+			shr3: present_state = shr4;
+			shr4: present_state = shr5;
+			shr5: present_state = T0;
+			
+			// shra
+
+			shra3: present_state = shra4;
+			shra4: present_state = shra5;
+			shra5: present_state = T0;
+			
+			// shl
+
+			shl3: present_state = shl4;
+			shl4: present_state = shl5;
+			shl5: present_state = T0;
+			
+			//addi
+
+			addi3: present_state = addi4;
+			addi4: present_state = addi5;
+			addi5: present_state = T0;
+			
+			//andi
+
+			andi3: present_state = andi4;
+			andi4: present_state = andi5;
+			andi5: present_state = T0;
+			
+			//ori
+
+			ori3: present_state = ori4;
+			ori4: present_state = ori5;
+			ori5: present_state = T0;
+			
+			//div
+
+			div3: present_state = div4;
+			div4: present_state = div5;
+			div5: present_state = T0;
+			
+			//mul
+
+			mul3: present_state = mul4;
+			mul4: present_state = mul5;
+			mul5: present_state = T0;
+			
+			//neg
+
+			neg3: present_state = neg4;
+			neg4: present_state = neg5;
+			neg5: present_state = T0;
+			
+			//not
+
+			not3: present_state = not4;
+			not4: present_state = not5;
+			not5: present_state = T0;
+			
+			// br
+
+			br3: present_state = br4;
+			br4: present_state = br5;
+			br5: present_state = br6;
+			br6: present_state = T0;
+			
+			//jal
+
+			jal3: present_state = jal4;
+			jal4: present_state = T0;
+			
+			//jr
+
+			jr3: present_state = T0;
+			
+			// in
+
+			in3: present_state = T0;
+			
+			// out
+
+			out3: present_state = T0;
+			
+			// mflo
+
+			mflo3: present_state = T0;
+			
+			// mfhi
+
+			mfhi3: present_state = T0;
+			
+			//nop
+
+			nop: present_state = T0;
+			
+			// halt
+			
+			halt: present_state = T0;
 		endcase
 	end
 end
